@@ -1,0 +1,7 @@
+{
+  "login": {
+    "welcome": "//h2[contains(text(), 'Добро пожаловать на open.by!')]",
+    "loginInput": "//input[@id='email']",
+    "passwordInput": "//input[@id='password']"
+  }
+}

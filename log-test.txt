@@ -1,0 +1,12 @@
+DEBUG    [2025-05-22 18:06:52] {selector_events.py:64} [__init__             ] - Using selector: KqueueSelector
+INFO     [2025-05-22 18:06:53] {test_example.py:13} [make_video           ] - Fixture setup - making video
+INFO     [2025-05-22 18:06:53] {test_example.py:24} [load_login_page_fixtu] - Fixture setup - loading login page
+INFO     [2025-05-22 18:06:56] {test_example.py:35} [test_page_welcome    ] - Verify page loaded successfully
+INFO     [2025-05-22 18:06:56] {test_example.py:36} [test_page_welcome    ] - Checking Welcome text
+INFO     [2025-05-22 18:06:56] {test_example.py:38} [test_page_welcome    ] - Welcome text: 
+          Добро пожаловать на open.by!
+        
+INFO     [2025-05-22 18:06:56] {test_example.py:24} [load_login_page_fixtu] - Fixture setup - loading login page
+INFO     [2025-05-22 18:06:59] {test_example.py:24} [load_login_page_fixtu] - Fixture setup - loading login page
+INFO     [2025-05-22 18:07:01] {test_example.py:24} [load_login_page_fixtu] - Fixture setup - loading login page
+INFO     [2025-05-22 18:07:04] {test_example.py:15} [make_video           ] - Fixture teardown - save video

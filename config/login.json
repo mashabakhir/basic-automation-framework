@@ -1,0 +1,17 @@
+{
+  "loginUrl": "https://open.by",
+  "validCredentials": {
+    "userName": "admin",
+    "password": "test123"
+  },
+  "invalidCredentials": [
+    {
+      "userName": "#$$$@!235",
+      "password": "*"
+    },
+    {
+      "userName": ">_++)|\"",
+      "password": "]"
+    }
+  ]
+}
