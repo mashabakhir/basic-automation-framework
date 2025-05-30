@@ -1,0 +1,2 @@
+INFO     [2025-05-23 19:52:09] {test_example.py:13} [make_video           ] - Fixture setup - making video
+INFO     [2025-05-23 19:52:09] {test_example.py:15} [make_video           ] - Fixture teardown - save video

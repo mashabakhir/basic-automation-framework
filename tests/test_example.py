@@ -48,12 +48,12 @@ class TestsLoginPage:
         """
         pass
 
-    def test_input_login_without_pass(self):
+    def test_input_login_without_pass(self, page: Page):
         """
         Input only login without password
         Verify error message was shown (smth like "Please enter your password") - check on site
         """
         pass
 
-    def test_input_password_without_login(self):
+    def test_input_password_without_login(self, page: Page):
         pass
