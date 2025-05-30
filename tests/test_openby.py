@@ -1,16 +1,16 @@
 import pytest
 import logging
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, Page
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def pytest_addoption(parser):
-    parser.addoption(
-        "--headless",
-        action="store_true",
-        default=False,
-        help="Run browser in headless mode"
-    )
+# def pytest_addoption(parser):
+#     parser.addoption(
+#         "--headless",
+#         action="store_true",
+#         default=False,
+#         help="Run browser in headless mode"
+#     )
 
 @pytest.fixture(scope="session", autouse=True)
 def Setup_And_Tear_Down_Suite():
@@ -18,18 +18,20 @@ def Setup_And_Tear_Down_Suite():
     yield
     logging.info("tearDown after test suite execution")
 
-@pytest.fixture(scope="session")
-def browser_context_args(pytestconfig):
-    headless = pytestconfig.getoption("--headless", default=False)
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=headless)
-        context = browser.new_context()
-        yield context
-        browser.close()
+# @pytest.fixture()
+# def browser_context_args(pytestconfig):
+#     headless = pytestconfig.getoption("--headless", default=False)
+#     with sync_playwright() as p:
+#         browser = p.chromium.launch(headless=headless)
+#         context = browser.new_context()
+#         yield context
+#         browser.close()
+
 
 class Test_logForm:
-    def test_logging(self, browser_context):
-        page = browser_context.new_page()
+
+    def test_logging(self, page: Page):
+        # page = browser_context.new_page()
         logging.info("Navigating to website")
         page.goto("https://open.by")
 
