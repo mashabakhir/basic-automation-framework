@@ -1,19 +1,12 @@
 import pytest
 import logging
+import time
 from playwright.sync_api import sync_playwright
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def pytest_addoption(parser):
-    parser.addoption(
-        "--headless",
-        action="store_true",
-        default=False,
-        help="Run browser in headless mode"
-    )
-
 @pytest.fixture(scope="session", autouse=True)
-def SetupAndTearDownSuite():
+def setup_and_tear_down_suite():
     logging.info("Setup before test suite execution")
     yield
     logging.info("TearDown after test suite execution")
@@ -36,6 +29,9 @@ class TestRegistrationForm:
         logging.info("Clicking the login button")
         page.locator("span.nav__link-text", has_text="Войти").click()
 
+        logging.info("Waiting for username field to be visible")
+        page.wait_for_selector("#authPhone", state="visible", timeout=5000)
+
         logging.info("Checking registration fields")
         assert page.locator("#authPhone").is_visible(), "Username field not visible"
         assert page.locator("#passwordPhone").is_visible(), "Password field not visible"
@@ -46,9 +42,15 @@ class TestRegistrationForm:
         page.locator("#passwordPhone").fill("bmparola2006")
 
         logging.info("Attempting to submit the registration form")
-        submit_button = page.locator("button.button--action:has(span.button__text)", has_text="Войти")
-        submit_button.wait_for(state="attached")
-        submit_button.wait_for(state="enabled")
-        submit_button.click()
+        page.locator("button.button--action:has(span.button__text)", has_text="Войти")
+
+        logging.info("Waiting for homepage after login")
+        page.wait_for_timeout(5000)
+
+
+        logging.info("Navigating to car listings")
+        page.goto("https://cars.av.by")
+
+        time.sleep (30)
 
         logging.info("Registration form submitted (if no validation errors occurred)")

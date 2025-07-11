@@ -1,10 +1,7 @@
-INFO     [2025-05-30 19:20:20] {tests_logging_form.py:20} [SetupAndTearDownSuite] - Setup before test suite execution
-DEBUG    [2025-05-30 19:20:20] {proactor_events.py:631} [__init__             ] - Using proactor: IocpProactor
-INFO     [2025-05-30 19:20:24] {tests_logging_form.py:43} [test_registration    ] - Navigating to onliner.by
-INFO     [2025-05-30 19:20:26] {tests_logging_form.py:46} [test_registration    ] - Clicking the login button
-INFO     [2025-05-30 19:20:27] {tests_logging_form.py:49} [test_registration    ] - Checking registration fields
-INFO     [2025-05-30 19:20:27] {tests_logging_form.py:53} [test_registration    ] - All registration fields are present
-INFO     [2025-05-30 19:20:27] {tests_logging_form.py:54} [test_registration    ] - Filling registration form with test data
-INFO     [2025-05-30 19:20:27] {tests_logging_form.py:58} [test_registration    ] - Attempting to submit the registration form
-INFO     [2025-05-30 19:20:57] {tests_logging_form.py:63} [test_registration    ] - Registration form submitted (if no validation errors occurred)
-INFO     [2025-05-30 19:20:57] {tests_logging_form.py:23} [SetupAndTearDownSuite] - TearDown after test suite execution
+INFO     [2025-06-15 16:06:07] {test_beltelecom.py:17} [setup_and_tear_down_s] - setup before test suite execution
+DEBUG    [2025-06-15 16:06:07] {proactor_events.py:631} [__init__             ] - Using proactor: IocpProactor
+INFO     [2025-06-15 16:06:08] {test_beltelecom.py:33} [test_logging         ] - navigating to website
+INFO     [2025-06-15 16:06:12] {test_beltelecom.py:36} [test_logging         ] - clicking the login button
+INFO     [2025-06-15 16:06:13] {test_beltelecom.py:40} [test_logging         ] - selecting new version
+INFO     [2025-06-15 16:06:15] {test_beltelecom.py:44} [test_logging         ] - waiting for username field to be visible
+INFO     [2025-06-15 16:06:34] {test_beltelecom.py:19} [setup_and_tear_down_s] - tearDown after test suite execution
