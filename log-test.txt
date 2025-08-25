@@ -1,7 +1,4 @@
-INFO     [2025-06-15 16:06:07] {test_beltelecom.py:17} [setup_and_tear_down_s] - setup before test suite execution
-DEBUG    [2025-06-15 16:06:07] {proactor_events.py:631} [__init__             ] - Using proactor: IocpProactor
-INFO     [2025-06-15 16:06:08] {test_beltelecom.py:33} [test_logging         ] - navigating to website
-INFO     [2025-06-15 16:06:12] {test_beltelecom.py:36} [test_logging         ] - clicking the login button
-INFO     [2025-06-15 16:06:13] {test_beltelecom.py:40} [test_logging         ] - selecting new version
-INFO     [2025-06-15 16:06:15] {test_beltelecom.py:44} [test_logging         ] - waiting for username field to be visible
-INFO     [2025-06-15 16:06:34] {test_beltelecom.py:19} [setup_and_tear_down_s] - tearDown after test suite execution
+INFO     [2025-08-25 21:41:36] {protesting.py:20} [SetupAndTearDownSuite] - Setup before test suite execution
+DEBUG    [2025-08-25 21:41:36] {proactor_events.py:631} [__init__             ] - Using proactor: IocpProactor
+INFO     [2025-08-25 21:41:39] {protesting.py:43} [test_registration    ] - Navigating to protesting.it
+INFO     [2025-08-25 21:41:42] {protesting.py:23} [SetupAndTearDownSuite] - TearDown after test suite execution
