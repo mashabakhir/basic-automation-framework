@@ -40,7 +40,35 @@ def browser_context_args(pytestconfig):
 class TestRegistrationForm:
     def test_registration(self, browser_context_args):
         page = browser_context_args.new_page() #open new tab in the browser
-        logging.info("Navigating to protesting.it")
-        page.goto("https://www.protesting.it/") #go to the target website
+        logging.info("Navigating to calculator888.ru")
+        page.goto("https://calculator888.ru") #go to the target website
 
-        time.sleep(300)
+
+        logging.info("Running basic Python expressions")
+        print("2 + 3 =", 2 + 3)
+        print("2 ** 5 =", 2 ** 5)
+        print("9 // 2 =", 9 // 2)
+        print("9 % 2 =", 9 % 2)
+
+
+        x = 7
+        if x > 5:
+            print(f"x = {x}, это больше 5")
+        elif x == 5:
+            print(f"x = {x}, это равно 5")
+        else:
+            print(f"x = {x}, это меньше 5")
+
+
+        logging.info("Running for loop example")
+        for i in range(1, 6):
+            print(f"Итерация {i}, квадрат числа = {i*i}")
+
+        logging.info("Running while loop example")
+        counter = 0
+        while counter < 3:
+            print("while-loop, counter =", counter)
+            counter += 1
+
+        assert "Калькулятор" in page.title(), "Сайт calculator888.ru не открылся корректно"
+        logging.info("Test finished successfully")
