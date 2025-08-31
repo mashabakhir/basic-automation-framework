@@ -1,4 +1,5 @@
-INFO     [2025-08-25 21:41:36] {protesting.py:20} [SetupAndTearDownSuite] - Setup before test suite execution
-DEBUG    [2025-08-25 21:41:36] {proactor_events.py:631} [__init__             ] - Using proactor: IocpProactor
-INFO     [2025-08-25 21:41:39] {protesting.py:43} [test_registration    ] - Navigating to protesting.it
-INFO     [2025-08-25 21:41:42] {protesting.py:23} [SetupAndTearDownSuite] - TearDown after test suite execution
+INFO     [2025-08-31 20:01:28] {calcu.py:20} [SetupAndTearDownSuite] - Setup before test suite execution
+DEBUG    [2025-08-31 20:01:28] {proactor_events.py:631} [__init__             ] - Using proactor: IocpProactor
+INFO     [2025-08-31 20:01:30] {calcu.py:43} [test_registration    ] - Navigating to www.desmos.com
+INFO     [2025-08-31 20:01:36] {calcu.py:46} [test_registration    ] - Divison of numbers
+WARNING  [2025-08-31 20:01:38] {calcu.py:52} [test_registration    ] - Division by zero is impossible.
