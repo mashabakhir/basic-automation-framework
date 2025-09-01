@@ -37,15 +37,34 @@ def browser_context_args(pytestconfig):
         # close the browser after all tests using this fixture have completed
         browser.close()
 
+def click_number(page, num: str):
+
+    logging.info(f"Clicking number {num}")
+    page.click(f"span[dcg-command='{num}']")
+
+
+def click_operator(page, operator: str):
+
+    logging.info(f"Clicking operator {operator}")
+    page.click(f"span[dcg-command='{operator}']")
+
+
+def calculate(page, a: str, op: str, b: str):
+
+    click_number(page, a)
+    click_operator(page, op)
+    click_number(page, b)
+
+    page.click("span[dcg-command='=']")
+    logging.info(f"Performed calculation: {a} {op} {b}")
+
 class TestRegistrationForm:
     def test_registration(self, browser_context_args):
-        page = browser_context_args.new_page() #open new tab in the browser
+        page = browser_context_args.new_page()
         logging.info("Navigating to www.desmos.com")
-        page.goto("https://www.desmos.com/scientific?lang=ru") #go to the target website
+        page.goto("https://www.desmos.com/scientific?lang=ru")
 
         logging.info("Addition of numbers")
-        page.click("span[dcg-command='3']")
-        page.click("span[dcg-command='+']")
-        page.click("span[dcg-command='1']")
+        calculate(page, "3", "+", "1")
 
         time.sleep (30)
