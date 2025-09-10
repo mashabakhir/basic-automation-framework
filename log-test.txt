@@ -1,8 +1,9 @@
-INFO     [2025-09-01 20:39:59] {calc.py:20} [SetupAndTearDownSuite] - Setup before test suite execution
-DEBUG    [2025-09-01 20:39:59] {proactor_events.py:631} [__init__             ] - Using proactor: IocpProactor
-INFO     [2025-09-01 20:40:02] {calc.py:64} [test_registration    ] - Navigating to www.desmos.com
-INFO     [2025-09-01 20:40:06] {calc.py:67} [test_registration    ] - Addition of numbers
-INFO     [2025-09-01 20:40:06] {calc.py:42} [click_number         ] - Clicking number 3
-INFO     [2025-09-01 20:40:07] {calc.py:48} [click_operator       ] - Clicking operator +
-INFO     [2025-09-01 20:40:07] {calc.py:42} [click_number         ] - Clicking number 1
-INFO     [2025-09-01 20:40:13] {calc.py:23} [SetupAndTearDownSuite] - TearDown after test suite execution
+DEBUG    [2025-09-09 20:49:31] {proactor_events.py:631} [__init__             ] - Using proactor: IocpProactor
+INFO     [2025-09-09 20:49:33] {test_example.py:13} [make_video           ] - Fixture setup - making video
+INFO     [2025-09-09 20:49:34] {test_example.py:24} [load_login_page_fixtu] - Fixture setup - loading login page
+INFO     [2025-09-09 20:49:40] {test_example.py:35} [test_page_welcome    ] - Verify page loaded successfully
+INFO     [2025-09-09 20:49:40] {test_example.py:36} [test_page_welcome    ] - Checking Welcome text
+INFO     [2025-09-09 20:50:10] {test_example.py:24} [load_login_page_fixtu] - Fixture setup - loading login page
+INFO     [2025-09-09 20:50:13] {test_example.py:24} [load_login_page_fixtu] - Fixture setup - loading login page
+INFO     [2025-09-09 20:50:16] {test_example.py:24} [load_login_page_fixtu] - Fixture setup - loading login page
+INFO     [2025-09-09 20:50:18] {test_example.py:15} [make_video           ] - Fixture teardown - save video
