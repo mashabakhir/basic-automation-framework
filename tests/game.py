@@ -19,7 +19,7 @@ def GetAvailableLetters(letters_guessed):
     return "".join(letter for letter in string.ascii_lowercase if letter not in letters_guessed)
 
 def hangman(secret_word):
-    print("Welcome to the game Hangman!")
+    print("Welcome to the game!")
     print(f"I am thinking of a word that is {len(secret_word)} letters long.")
 
     guesses_left = 10
@@ -33,14 +33,14 @@ def hangman(secret_word):
         guess = input("Please guess a letter: ").lower()
 
         if guess in letters_guessed:
-            print("Oops! You've already guessed that letter:", GetGuessedWord(secret_word, letters_guessed))
+            print("You've already guessed that letter:", GetGuessedWord(secret_word, letters_guessed))
         elif guess in secret_word:
             letters_guessed.append(guess)
             print("Good guess:", GetGuessedWord(secret_word, letters_guessed))
         else:
             letters_guessed.append(guess)
             guesses_left -= 1
-            print("Oops! That letter is not in my word:", GetGuessedWord(secret_word, letters_guessed))
+            print("That letter is not in my word:", GetGuessedWord(secret_word, letters_guessed))
 
     print("-" * 15)
     if IsWordGuessed(secret_word, letters_guessed):
